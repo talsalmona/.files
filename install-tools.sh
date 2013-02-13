@@ -21,5 +21,5 @@ sudo apt-get update
 sudo apt-get -y install keepass2 meld dropbox everpad gimp curl wget espeak vlc skype google-chrome-beta
 
 #Install dev tools
-sudo apt-get -y install npm ruby1.9.1-full nodejs openjdk-7-jdk git git-cola git-svn git-flow subversion
+sudo apt-get -y install npm ruby1.9.1-full nodejs openjdk-7-jdk git git-cola git-svn git-flow subversion the-silver-searcher
 
