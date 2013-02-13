@@ -86,10 +86,6 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 
-# Add an "alert" alias for long running commands.  Use like so:
-#   sleep 10; alert
-alias s='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
-
 # Alias definitions.
 # You may want to put all your additions into a separate file like
 # ~/.bash_aliases, instead of adding them here directly.
@@ -106,7 +102,7 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
-
+# Add git branch coloring
 function _git_prompt() {
 local git_status="`git status -unormal 2>&1`"
 if ! [[ "$git_status" =~ Not\ a\ git\ repo ]]; then
@@ -133,16 +129,16 @@ PS1="`_git_prompt`"'\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\u@\h:
 }
 PROMPT_COMMAND=_prompt_command
 
+# Add an "alert" alias for long running commands.  Use like so:
 alias alert_helper='history|tail -n1|sed -e "s/^\s*[0-9]\+\s*//" -e "s/;\s*alert$//"'
-alias alert='notify-send -i /usr/share/icons/gnome/32x32/apps/gnome-terminal.png "[$?] $(alert_helper)"; espeak -v en "Task complete: $(alert_helper)"'
+alias s='notify-send -i /usr/share/icons/gnome/32x32/apps/gnome-terminal.png "[$?] $(alert_helper)"; espeak -v en "Task complete: $(alert_helper)"'
 
+
+# Some useful environment variables
 export JAVA_HOME=/work/env/jdk1.7.0_10
 export JDK_HOME=$JAVA_HOME
-
 export VERTEX_HOME=/work/env/vertex
-
 export M2_HOME=/work/env/apache-maven-3.0.4
-
 export PATH=$PATH:~/bin/:~/gradlek-1.0/bin/:/work/apps/q:$JAVA_HOME/bin:/opt/vagrant/bin:$VERTEX_HOME/bin:$M2_HOME/bin
 
 
