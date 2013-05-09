@@ -137,9 +137,10 @@ alias s='notify-send -i /usr/share/icons/gnome/32x32/apps/gnome-terminal.png "[$
 # Some useful environment variables
 export JAVA_HOME=/work/env/jdk1.7.0_10
 export JDK_HOME=$JAVA_HOME
-export VERTEX_HOME=/work/env/vertex
 export M2_HOME=/work/env/apache-maven-3.0.4
-export PATH=$PATH:~/bin/:~/gradlek-1.0/bin/:/work/apps/q:$JAVA_HOME/bin:/opt/vagrant/bin:$VERTEX_HOME/bin:$M2_HOME/bin
+export SCRIPTED_HOME=/work/env/scripted-editor
+export IDEA_HOME=/work/env/idea-IC-129.161
+export PATH=$PATH:~/bin/:~/gradlek-1.0/bin/:/work/apps/q:$JAVA_HOME/bin:/opt/vagrant/bin:$M2_HOME/bin:$SCRIPTED_HOME/bin:$IDEA_HOME/bin
 
 
 export PATH=/work/env/SenchaSDKTools-1.2.3:$PATH
@@ -149,4 +150,8 @@ export PATH=/work/env/SenchaSDKTools-1.2.3/appbuilder:$PATH
 
 alias git=hub
 
+source /home/tal/.rvm/scripts/rvm
 
+
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
