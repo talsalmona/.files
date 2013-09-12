@@ -140,7 +140,8 @@ export JDK_HOME=$JAVA_HOME
 export M2_HOME=/work/env/apache-maven-3.0.4
 export SCRIPTED_HOME=/work/env/scripted-editor
 export IDEA_HOME=/work/env/idea-IC-129.161
-export PATH=$PATH:~/bin/:~/gradlek-1.0/bin/:/work/apps/q:$JAVA_HOME/bin:/opt/vagrant/bin:$M2_HOME/bin:$SCRIPTED_HOME/bin:$IDEA_HOME/bin
+export PLAY_HOME=/work/env/play-2.1.1
+export PATH=$PATH:~/bin/:~/gradlek-1.0/bin/:/work/apps/q:$JAVA_HOME/bin:/opt/vagrant/bin:$M2_HOME/bin:$SCRIPTED_HOME/bin:$IDEA_HOME/bin:$PLAY_HOME
 
 
 export PATH=/work/env/SenchaSDKTools-1.2.3:$PATH
